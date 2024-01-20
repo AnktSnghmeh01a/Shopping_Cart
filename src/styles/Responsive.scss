@@ -1,0 +1,63 @@
+@media (max-width: 768px) {
+
+.header{
+
+  .upper-header {
+    padding: 0.5em;
+  
+    > .logo-part {
+      > h1 {
+        font-size: 1.2em;
+      }
+    }
+
+    .middle-div-navbar-portion {
+ 
+      >select {
+        width: 3em;
+        height: 3.5em;
+      }
+
+      >input {
+
+
+        &:focus {
+          > .middle-div-navbar-portion {
+          }
+        }
+        &::placeholder {
+          font-size: 1em;
+        }
+      }
+
+      > .search-icon-input-bar {
+       
+        
+        > .search-icon {
+         
+        }
+      }
+
+
+    }
+
+    > .cart-portion {
+
+       >.cart-icon{
+         font-size: 1.5em;
+        }
+    
+    
+      }
+  }
+
+}
+ 
+
+
+
+
+
+
+
+}

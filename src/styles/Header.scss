@@ -1,0 +1,120 @@
+.header {
+  font-family: "poppins";
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  // gap: 1vw;
+  top: 0;
+  left: 0;
+  min-height: 100%;
+  background-size: cover;
+  color: #e4e9ee;
+  .upper-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8em;
+    background-color: #131921;
+
+    > .logo-part {
+      > h1 {
+        font-weight: 300;
+        text-shadow: 1px 2px 3px #000000;
+      }
+    }
+
+    .middle-div-navbar-portion {
+      display: flex;
+      border: 3px solid  transparent;
+      border-top-left-radius: 1em;
+      border-bottom-right-radius: 1em;
+
+      // padding: 1em;
+      > select {
+        width: 4.5em;
+        height: 3.5em;
+        box-shadow: 1px 1px 2px 0.5px #e4e9eeb7;
+        border-top-left-radius: 1em;
+        border: none;
+        background-color: #646060;
+        color: #e4e9ee;
+        padding: 1em;
+        cursor: pointer;
+        &:focus {
+          outline: none;
+        }
+        > option {
+          padding: 1em;
+        }
+      }
+
+      >input{
+        width: 45vw;
+        border: none;
+        font-size: 1em;
+        padding-left: 1em;
+        font-family: "poppins";
+        &:focus {
+          outline: none;
+
+     
+        }
+        &::placeholder {
+          color: black;
+          font-size: 1em;
+        }
+      }
+
+      >.search-icon-input-bar {
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-bottom-right-radius: 1em;
+        background-color: #646060;
+        color: #e4e9ee;
+        width: 3em;
+        box-shadow: 1px 1px 2px 0.5px #e4e9eeb7;
+
+        > .search-icon {
+          font-size: 1.5em;
+          cursor: pointer;
+        }
+      }
+    }
+
+    > .middle-div-navbar-portion:focus-within {
+      border: 3px solid red;
+      border-top-left-radius: 1em;
+      border-bottom-right-radius: 1em;
+    }
+    > .cart-portion {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      > .cart-icon {
+        font-size: 2em;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .lower-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 1em;
+    justify-content: space-around;
+    background-color: #232F3E;
+    >a{
+      text-decoration: none;
+      color: #e4e9ee;
+      font-size: 1em;   
+      :hover {
+        background-color: #615f5f49;
+      }
+    }
+  }
+}

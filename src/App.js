@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import {BrowserRouter as Router,Routes,Route} from 'react-router-dom';
+import Header from './components/Header';
+import Home from './components/Home';
+import Books from './components/Books';
+import Clothing from './components/Clothing';
+import Electronics from './components/Electronics';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+// Import CSS
+import './styles/App.scss';
+import './styles/Header.scss';
+import './styles/Responsive.scss';
+
+const App = () => {
+  return  <Router>
+   <Header/>
+ 
+    <Routes>
+ 
+      <Route path={'/home'} element={<Home/>} />
+      <Route path={'/books'} element={<Books/>} />
+      <Route path={'/cloths'} element={<Clothing/>} />
+      <Route path={'/electronics'} element={<Electronics/>} />
+
+
+    </Routes>
+
+
+  </Router>
+  
 }
 
-export default App;
+export default App
