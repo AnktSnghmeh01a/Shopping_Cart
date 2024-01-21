@@ -14,41 +14,61 @@
       border: 2px solid rgb(231, 229, 229);
       border-radius: 1em;
     }
+   
     .middle-div-navbar-portion {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 2em;
-      > select {
-        width: 3em;
-        height: 0.5em;
-        box-shadow: 1px 1px 1px 0.5px #e4e9eeb7;
-        border-top-left-radius: 1em;
-        border-bottom-left-radius: 1em;
 
+      border: 2px solid transparent;
+      border-radius: 1em;
+      display: flex;
+      overflow: hidden;
+
+          > select {
+        width: 4.5em;
+        box-shadow: 1px 1px 2px 0.5px #e4e9eeb7;
+        border: none;
+        background-color: #232F3E;
+        color: #e4e9ee;
+        border-radius: 1em 0px 0px 1em;
+        cursor: pointer;
+        &:focus {
+          outline: none;
+        }
+     
       }
 
-      >input {
-
+      >input{
+        width: 45vw;
+        border: none;
+        font-size: 1em;
+        padding-left: 1em;
+        font-family: "poppins";
         &:focus {
-          > .middle-div-navbar-portion {
-          }
+          outline: none;
+
+     
         }
         &::placeholder {
-          font-size: 0.7em;
-          margin: 0 auto;
+          color: black;
+          font-size: 1em;
         }
       }
 
-      > .search-icon-input-bar {
-        border-top-right-radius: 1em;
-       
+      >.search-icon-input-bar {
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 0em 1em 1em 0em;
+        background-color: #232F3E;
+        color: #e4e9ee;
+        width: 3em;
+        box-shadow: 1px 1px 2px 0.5px #e4e9eeb7;
+
         > .search-icon {
-         
+          font-size: 1.5em;
+          cursor: pointer;
         }
       }
-
-
     }
 
     > .cart-portion {
@@ -68,11 +88,10 @@
     background-color: #232F3E;
     position: relative;
     gap: 2em;
+
     .links-part{
       position: absolute;
       transition: all 0.1s ease;
-
-      // position: relative;
       top: -2000%;
       display: flex;
       flex-direction: column;
