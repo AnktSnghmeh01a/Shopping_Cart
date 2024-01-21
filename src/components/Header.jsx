@@ -1,9 +1,26 @@
-import React from "react";
+import React,{useState} from "react";
 import { HashLink } from "react-router-hash-link";
-import { AiOutlineSearch, AiOutlineShoppingCart } from "react-icons/ai";
+import { AiOutlineSearch, AiOutlineShoppingCart ,AiOutlineMenu } from "react-icons/ai";
 
 const Header = () => {
-  return (
+ 
+
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const handleMenuClick = () => {
+
+         const allLinks = document.querySelector(".links-part");
+
+        
+         if(isMenuOpen){
+          allLinks.style.position = 'relative';
+        }
+         else{
+          allLinks.style.position = 'absolute';
+        }  
+        setIsMenuOpen(!isMenuOpen);
+        };
+
+    return (
     <header className="header">
 
       <div className="upper-header">
@@ -24,27 +41,14 @@ const Header = () => {
 
             <option value="1" label="All Categories"></option>
 
-            <option value="2" label="i-phone-15-pro"></option>
+            <option value="2" label="Home"></option>
 
-            <option value="2" label="i-phone-15-pro"></option>
+            <option value="2" label="Clothing"></option>
 
-            <option value="2" label="i-phone-15-pro"></option>
+            <option value="2" label="Books"></option>
 
-            <option value="4" label="amazon speaker"></option>
+            <option value="4" label="Electronics"></option>
 
-            <option value="5" label="Watch"></option>
-
-            <option value="3" label="i-phone-15-pro"></option>
-
-            <option value="6" label="Watch"></option>
-
-            <option value="3" label="i-phone-15-pro"></option>
-
-            <option value="7" label="Watch"></option>
-
-            <option value="3" label="i-phone-15-pro"></option>
-
-            <option value="8" label="Watch"></option>
           </select>
 
           <input
@@ -64,10 +68,19 @@ const Header = () => {
       </div>
 
      <div className="lower-header">
+
+       <div className="links-part">
         <HashLink to={"/home"}>Home</HashLink>
         <HashLink to={"/cloths"}>Clothing</HashLink>
         <HashLink to={"/books"}>Books</HashLink>
         <HashLink to={"/electronics"}>Electronics</HashLink>
+       </div>
+    
+
+       <div className="menu">
+      <AiOutlineMenu className="menu-icon" onClick={handleMenuClick} />
+    </div>
+
       </div>
     </header>
   );
