@@ -8,6 +8,7 @@ import {
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  
   const handleMenuClick = () => {
     const allLinks = document.querySelector(".links-part");
 
@@ -18,6 +19,13 @@ const Header = () => {
     }
     setIsMenuOpen(!isMenuOpen);
   };
+
+  const handleClick=()=>{
+   
+
+    const allLinks = document.querySelector(".links-part");  
+      allLinks.style.position = "absolute";
+  }
 
   return (
     <header className="header">
@@ -71,10 +79,10 @@ const Header = () => {
 
       <div className="lower-header">
         <div className="links-part">
-          <HashLink to={"/home"}>Home</HashLink>
-          <HashLink to={"/cloths"}>Clothing</HashLink>
-          <HashLink to={"/books"}>Books</HashLink>
-          <HashLink to={"/electronics"}>Electronics</HashLink>
+          <HashLink to={"/home"} onClick={handleClick}>Home</HashLink>
+          <HashLink to={"/cloths"}onClick={handleClick}>Clothing</HashLink>
+          <HashLink to={"/books"}onClick={handleClick}>Books</HashLink>
+          <HashLink to={"/electronics"}onClick={handleClick}>Electronics</HashLink>
         </div>
 
         <div className="menu">
