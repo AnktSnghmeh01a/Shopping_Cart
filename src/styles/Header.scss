@@ -11,8 +11,8 @@
   .upper-header {
     width: 100%;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    // gap: 3em;
     padding: 0.8em;
     background-color: #131921;
     border-bottom: 0.3px solid #e4e9ee;
@@ -20,10 +20,15 @@
       > h1 {
         font-weight: 300;
         text-shadow: 1px 2px 3px #000000;
+        margin-right: 4em;
       }
     }
 
-    .middle-div-navbar-portion {
+    >.right-portion-upper-header{
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      .middle-div-navbar-portion {
       display: flex;
       border: 3px solid  transparent;
       border-top-left-radius: 1em;
@@ -81,14 +86,11 @@
           cursor: pointer;
         }
       }
-    }
-
-    > .middle-div-navbar-portion:focus-within {
+    }> .middle-div-navbar-portion:focus-within {
       border: 3px solid rgb(231, 229, 229);
       border-top-left-radius: 1em;
       border-bottom-right-radius: 1em;
-    }
-    > .cart-portion {
+    }   > .cart-portion {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -98,6 +100,11 @@
         cursor: pointer;
       }
     }
+    }
+    
+
+    
+ 
   }
 
   .lower-header {

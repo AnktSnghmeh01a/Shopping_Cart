@@ -4,32 +4,46 @@
 
   .upper-header {
     padding: 0.5em;
-  
+     flex-direction: column;
+     width: 100%;
     > .logo-part {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       > h1 {
-        font-size: 1.2em;
+        // border: 1px solid red;
+        font-size: 1em;
+
+      
       }
     }
-    > .middle-div-navbar-portion:focus-within {
+
+    >.right-portion-upper-header{
+        display: flex;
+        width: 100%;
+        gap: 0.6vw;
+        > .middle-div-navbar-portion:focus-within {
       border: 2px solid rgb(231, 229, 229);
       border-radius: 1em;
     }
-   
-    .middle-div-navbar-portion {
-
+     .middle-div-navbar-portion {
+      height: 2em;
       border: 2px solid transparent;
       border-radius: 1em;
       display: flex;
       overflow: hidden;
 
           > select {
-        width: 4.5em;
-        box-shadow: 1px 1px 2px 0.5px #e4e9eeb7;
+        width: 10vw;
+        height: 2em;
         border: none;
         background-color: #232F3E;
         color: #e4e9ee;
         border-radius: 1em 0px 0px 1em;
         cursor: pointer;
+        border-bottom: 1px solid #ffffff;   
+        box-shadow: none;
         &:focus {
           outline: none;
         }
@@ -37,10 +51,10 @@
       }
 
       >input{
-        width: 45vw;
+        width: 70vw;
         border: none;
         font-size: 1em;
-        padding-left: 1em;
+        padding-left: 1vw;
         font-family: "poppins";
         &:focus {
           outline: none;
@@ -61,24 +75,28 @@
         border-radius: 0em 1em 1em 0em;
         background-color: #232F3E;
         color: #e4e9ee;
-        width: 3em;
-        box-shadow: 1px 1px 2px 0.5px #e4e9eeb7;
-
+        width: 10vw;
+        border-top: 1px solid #ffffff;   
         > .search-icon {
-          font-size: 1.5em;
+
+         font-size: 1.5em;
           cursor: pointer;
         }
       }
     }
-
+    
     > .cart-portion {
 
-       >.cart-icon{
-         font-size: 1.5em;
-        }
-    
-    
-      }
+      >.cart-icon{
+        font-size: 1.5em;
+       }
+   
+   
+     }
+    }
+  
+  
+
   }
 
   .lower-header {
